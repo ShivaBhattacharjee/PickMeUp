@@ -26,6 +26,13 @@ export default function PickupLineGenerator() {
 
 
   const generatePickupLine = async () => {
+    if(!personality.trim()) {
+      toast({
+        title: 'Personality field is required',
+        description: 'Please describe the personality of the person you want to use the pickup line on.',
+      })
+      return
+    }
     setIsGenerating(true)
     try {
       const req = await axios.post('/api/generate-pickuplines', { personality: personality, gender: gender })
