@@ -16,9 +16,10 @@ import {
 import { Textarea } from "@/components/ui/textarea"
 import axios from 'axios'
 import { toast } from '@/hooks/use-toast'
+
 export default function PickupLineGenerator() {
   const [personality, setPersonality] = useState('')
-  const [gender, setGender] = useState<'male' | 'female' | 'neutral'>('neutral')
+  const [gender, setGender] = useState<'male' | 'female' | 'neutral'>('female')
   const [pickupLine, setPickupLine] = useState('')
   const [isGenerating, setIsGenerating] = useState(false)
   const [copied, setCopied] = useState(false)
@@ -26,20 +27,20 @@ export default function PickupLineGenerator() {
 
   const generatePickupLine = async () => {
     setIsGenerating(true)
-    try{
-      const req = await axios.post('/api/generate-pickuplines', {personality: personality , gender:gender})
+    try {
+      const req = await axios.post('/api/generate-pickuplines', { personality: personality, gender: gender })
       const res = await req.data
       setPickupLine(res.data)
-    }catch(error : unknown){
-      if (error instanceof Error){
+    } catch (error: unknown) {
+      if (error instanceof Error) {
         console.error("Error in POST handler:", error);
         toast({
           title: 'An error occurred',
           description: error.message,
         })
       }
-    }finally{
-    setIsGenerating(false)
+    } finally {
+      setIsGenerating(false)
     }
   }
 
