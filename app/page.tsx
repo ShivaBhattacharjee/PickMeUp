@@ -12,7 +12,7 @@ export default function Home() {
 
       <footer className=' justify-center items-center flex flex-col'>
         <p>© {new Date().getFullYear()} Pickup Line Generator</p>
-        <p>Made by Shiva Bhattacharjee</p>
+        <p>Made by <a href='https://x.com/sh17va' target='_blank' className=' border-b border-b-purple-200'>Shiva Bhattacharjee</a></p>
       </footer>
     </main>
   )
