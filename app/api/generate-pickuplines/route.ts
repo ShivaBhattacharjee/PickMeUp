@@ -69,9 +69,13 @@ const generatPickupLinePrompt = (personality: string , gender:string) => {
     `;
 };
 
-async function generatePickupLineContent(model: any, prompt: string) {
-  const roast = await model.generateContent(prompt);
-  return roast.response.text();
+interface Model {
+    generateContent: (prompt: string) => Promise<{ response: { text: () => string } }>;
+}
+
+async function generatePickupLineContent(model: Model, prompt: string): Promise<string> {
+    const roast = await model.generateContent(prompt);
+    return roast.response.text();
 }
 
 export const POST = async (req: NextRequest) => {

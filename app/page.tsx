@@ -1,5 +1,5 @@
 import PickupLineGenerator from '@/components/PickupLineGenerator'
-import AnimatedBackground from '@/components/AnimatedBackground'
+
 
 export default function Home() {
   return (
