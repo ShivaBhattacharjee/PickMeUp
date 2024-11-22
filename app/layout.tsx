@@ -15,7 +15,7 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Pickup Line Generator",
+  title: "PickMeUp - Pickup Line Generator",
   description: "Invest more time in your crush and less time in thinking about pickup lines. Let the AI do the work for you.",
 };
 
