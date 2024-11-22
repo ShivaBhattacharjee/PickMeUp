@@ -27,7 +27,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} min-h-screen bg-black text-white overflow-hidden antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} min-h-screen bg-black text-white overflow-x-hidden antialiased`}
       >
         <Toaster />
         <AnimatedBackground />
