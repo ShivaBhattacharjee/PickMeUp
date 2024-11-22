@@ -68,8 +68,8 @@ export default function PickupLineGenerator() {
         </div>
         <div className="space-y-2 z-50">
           <Label htmlFor="gender">Select Gender</Label>
-          <Select value={gender} onValueChange={(value) => setGender(value as 'male' | 'female' | 'neutral')}>
-            <SelectTrigger id="gender" className="bg-purple-800 bg-opacity-50 border-purple-600 text-white">
+          <Select value={gender} autoComplete='true' onValueChange={(value) => setGender(value as 'male' | 'female' | 'neutral')}>
+            <SelectTrigger id="gender" className="bg-purple-800 focus:outline-none focus:border-none bg-opacity-50 border-purple-600 text-white">
               <SelectValue placeholder="Select gender" />
             </SelectTrigger>
             <SelectContent className="bg-purple-800 text-white">
