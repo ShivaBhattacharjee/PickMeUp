@@ -85,7 +85,7 @@ export default function PickupLineGenerator() {
           className="w-full bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600"
         >
           {isGenerating ? (
-            'Hang on... 🧐'
+            'Hang on... 🧐 let me cook!!!'
           ) : (
             'Generate Pickup Line'
           )}
